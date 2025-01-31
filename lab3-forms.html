@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Lab 3 Coffee Order</title>
+		<meta charset="UTF-8"/>
+		<style>
+			form {
+				width: auto;
+				height: auto;
+				text-align: center;
+			}
+			form, textarea {
+				display: inline-block;
+				background-color: white;
+				padding: 1em;
+				border-radius: 1em;
+			}
+			body {
+				text-align: center;
+				background-color: #996633;
+				font-family: arial, times-new-roman;
+				width: auto;
+				height: auto;
+			}
+			li {
+				text-align: left;
+				list-style: none;
+			}
+			textarea {
+				box-sizing: border-box;
+				width: 400px;
+			}
+			div#cust_name, div#cust_mail {
+				text-align: center;
+				padding: 0.5em;
+			}
+			input#name, input#mail {
+				width: 200px;
+			}
+		</style>
+	</head>
+	<body>
+		<form action="https://www.w3schools.com/action_page.php" method="get">
+			<h1>Coffee Online Order Form</h1>
+			<section>
+				<h2>Customer Information</h2>
+				<p>Required fields are followed by <span aria-label="required">*</span></p>
+				<div id="cust_name">
+					<label for="name">Name: <span aria-label="required">*</span></label>
+					<input type="text" id="name" name="name" required />
+				</div>
+				<div id="cust_mail">
+					<label for="mail">Email: <span aria-label="required">*</span></label>
+					<input type="email" id="mail" name="email" required />
+				</div>
+			</section>
+			<section>
+				<h2>Coffee Order</h2>
+				<p>
+					<label for="type">
+						<span>Coffee type: </span>
+					</label>
+					<select>
+						<option value="regular">Regular</option>
+						<option value="latte">Latte</option>
+						<option value="cappuccino">Cappuccino</option>
+						<option value="americano">Americano</option>
+						<option value="espresso">Espresso</option>
+						<option value="frappuccino">Frappuccino</option>
+					</select>
+				</p>
+				<fieldset>
+					<legend>Cup Size <span aria-label="required">*</span></legend>
+					<ul>
+						<li>
+							<label for="size_1">
+								<input type="radio" id="size_1" name="size" value="extra small" required />
+								Extra Small
+							</label>
+						</li>
+						<li>
+							<label for="size_2">
+								<input type="radio" id="size_2" name="size" value="small" required />
+								Small
+							</label>
+						</li>
+						<li>
+							<label for="size_3">
+								<input type="radio" id="size_3" name="size" value="medium" required />
+							Medium
+							</label>
+						</li>
+						<li>
+							<label for="size_4">
+								<input type="radio" id="size_4" name="size" value="large" required />
+							Large
+							</label>
+						</li>
+						<li>
+							<label for="size_5">
+							<input type="radio" id="size_5" name="size" value="extra large" required />
+							Extra Large
+							</label>
+						</li>
+					</ul>
+				</fieldset>
+			</section>
+			<section>
+				<h2>Extras</h2>
+				<fieldset>
+					<legend>Toppings and Syrups</legend>
+					<ul>
+						<li>
+							<label for="top_1">
+								<input type="checkbox" id="top_1" name="topping" value="ground_cinnamon" />
+							Ground Cinnamon
+							</label>
+						</li>
+						<li>
+							<label for="top_2">
+								<input type="checkbox" id="top_2" name="topping" value="caramel_syrup" />
+							Caramel Syrup
+							</label>
+						</li>
+						<li>
+							<label for="top_3">
+								<input type="checkbox" id="top_3" name="topping" value="chocolate_syrup" />
+							Chocolate Syrup
+							</label>
+						</li>
+						<li>
+							<label for="top_4">
+								<input type="checkbox" id="top_4" name="topping" value="maple_syrup" />
+							Maple Syrup
+							</label>
+						</li>
+						<li>
+							<label for="top_5">
+								<input type="checkbox" id="top_5" name="topping" value="whipped_cream" />
+								Whipped Cream
+							</label>
+						</li>
+					</ul>
+				</fieldset>
+				<fieldset>
+					<legend>Milks and Flavored Creamers</legend>
+					<ul>
+						<li>
+							<label for="cream_1">
+								<input type="checkbox" id="cream_1" name="creamer" value="2%_milk" />
+							Milk (2%)
+							</label>
+						</li>
+						<li>
+							<label for="cream_2">
+								<input type="checkbox" id="cream_2" name="creamer" value="almond_milk"/>
+								Almond Milk
+							</label>
+						</li>
+						<li>
+							<label for="cream_3">
+								<input type="checkbox" id="cream_3" name="creamer" value="french_vanilla" />
+							French Vanilla
+							</label>
+						</li>
+						<li>
+							<label for="cream_4">
+								<input type="checkbox" id="cream_4" name="creamer" value="hazelnut" />
+							Hazelnut
+							</label>
+						</li>
+						<li>
+							<label for="cream_5">
+								<input type="checkbox" id="cream_5" name="creamer" value="italian_sweet" />
+							Italian Sweet Cream
+							</label>
+						</li>
+					</ul>
+				</fieldset>
+			</section>
+			<section>
+				<!-- This is for the extra instructions such as how to label everything -->
+				<h2>Special Instructions</h2>
+				<textarea></textarea>
+			</section>
+			<section>
+				<p>
+					<button type="submit">Submit Your Order</button>
+				</p>
+			</section>
+		</form>
+	</body>
+</html>
