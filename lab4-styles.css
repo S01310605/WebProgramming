@@ -1,0 +1,48 @@
+* {
+	background-color: #ffeeee;
+	font-family: Verdana, sans-serif;
+}
+
+h1 {
+	color: #aaaa00;
+	text-align: center;
+}
+
+p {
+	color: #00aa00;
+	padding: 10px 10px 10px 10px;
+}
+
+li::marker {
+	color: #bb00bb;
+}
+
+li {
+	color: #00aaaa;
+}
+
+a {
+	color: blue;
+}
+
+a:hover {
+	text-decoration: none;
+	
+	color: #bb0000;
+}
+
+.styled-box {
+	border-style: solid;
+	background-color: lightgrey;
+	padding: 15px 15px 15px 15px;
+	text-align: center;
+	
+	/* This margin is to make sure the styled box doesn't sit directly below the link and hide it's underlined text*/
+	margin: 10px 10px 10px 10px;
+}
+
+/* Advanced features */
+
+.styled-box:hover {
+	background-color: grey;
+}
