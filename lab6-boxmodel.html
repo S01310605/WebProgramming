@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>CSS Box Model Lab</title>
+		<style>
+		/* Add your CSS here */
+		.box {
+			border: 5px solid blue;
+			padding: 20px;
+			margin: 20px;
+			/* 
+				The box sizing property changed into border-box instead of the default content-box property 
+				The difference between border-box and content-box is the content-box takes the initial values 
+				and adds the border, padding, and margin to both height and width whereas the border-box uses 
+				all of these values to makes the element width and height up to the given values, decreasing 
+				content width and height.
+			*/
+			box-sizing: border-box;
+			background-color: rgb(212 175 255);
+			
+			/* 
+				Modified width and height properties to see the effects of borders and padding.
+				For content-box: the borders, margins, and paddings are added to the width and height values.
+					For example: content width = 500px,
+					element width = 500px + 20px + 20px + 5px + 5px = 550px
+				For border-box, content size decreased to make width and height the given values below.
+					For example: content width = 500px - 20px - 20px - 5px - 5px = 450px,
+					element width = 500px
+			*/
+			width: 500px;
+			height: 150px;
+		}
+		</style>
+	</head>
+	<body>
+		<h1>CSS Box Model Lab</h1>
+		<div class="box">
+			<p>This is a demonstration of the CSS Box Model.</p>
+		</div>
+		<!-- 
+			Experimentation by adding another div with a box class
+			This added box element has affected the margin between 
+			the two elements by having the elements separated based 
+			on the margin value for the box class applied to both elements.
+		-->
+		
+		<div class="box">
+			<!-- 
+				The padding determines the space between the content and the border. 
+				The border determines the space between the padding and margin.
+				The margin determines the space between each element. 
+			-->
+			<p>This is an added box to test how margin, border, and padding affects spacing between elements and its contents.</p>
+		</div>
+	</body>
+</html>
