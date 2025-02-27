@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Java Haven</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<!-- Style element for CSS design using Grid Layout and Flexbox and website theme -->
+		<style>
+			/* Grid Layout */
+			body {
+				display: grid;
+				grid-template-areas:
+					"header header"
+					"nav nav"
+					"main-content main-content"
+					"footer footer";
+				grid-auto-columns: minmax(20px, auto);
+				grid-auto-rows: minmax(20px, auto);
+				gap: 5%;
+				
+				margin: auto;
+			}
+			
+			header {
+				grid-area: header;
+				
+			}
+			
+			nav {
+				grid-area: nav;
+			}
+			
+			main {
+				grid-area: main-content;
+			}
+			
+			footer {
+				grid-area: footer;
+			}
+			
+			/* Flexbox Layout */
+			.flex-container {
+				display: flex;
+				flex-flow: row wrap;
+				align-items: center;
+				justify-content: space-evenly;
+				min-width: 200px;
+				gap: 10px;
+				margin: auto;
+			}
+			.flex-item {
+				width: 100px;
+				align-self: center;
+				margin: 0px;
+			}
+			
+			/* Navigation bar set as flex to minimize width for ul */
+			nav {
+				display: flex;
+				flex-flow: row wrap;
+				align-items: center;
+				justify-content: space-around;
+			}
+			
+			/* ul set as grid to set gaps between items and organize them */
+			ul {
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr;
+				align-items: center;
+				justify-content: space-between;
+				padding: 0;
+				grid-gap: 25px;
+			}
+			
+			
+			/* Media Properties */
+			@media screen and (width < 400px) {
+				h1 {
+					font-size: 2rem;
+				}
+				p {
+					font-size: 1rem;
+				}
+				body {
+					min-width: 150px;
+				}
+				nav {
+					min-width: 100px;
+				}
+				footer {
+					margin-top: 100%;
+				}
+				.flex-item {
+					width: 80px;
+				}
+			}
+			
+			@media screen and (height > 400px) {
+				/* footer {
+					margin-top: 100%;
+				} */
+			}
+			
+			/* Color Pallet, Styles, and Visual Layout */
+			* {
+				font-family: Georgia, sans-serif;
+				color: #fff4eb;
+				background-color: rgb(168, 118, 93);
+				text-align: center;
+			}
+			li {
+				list-style-type: none;
+				font-weight: bold;
+			}
+			.flex-item {
+				color: black;
+				background-color: white;
+				padding: 10px;
+				margin: 10px;
+			}
+			footer {
+				margin-top: 100%;
+			}
+			footer > p, h2 {
+				max-width: 300px;
+				margin: auto;
+				margin-bottom: 20px;
+			}
+			
+			
+		</style>
+		
+		<header class="header">
+			<h1>Java Haven</h1>
+			<p>Your daily dose of caffeine and comfort.</p>
+		</header>
+		<nav class="nav">
+			<ul>
+				<li><a href="#menu">Menu</a></li>
+				<li><a href="#about">About Us</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+		<main class="main-content">
+			<h2>Featured Coffees</h2>
+			<div class="flex-container">
+				<div class="flex-item">Espresso</div>
+				<div class="flex-item">Cappuccino</div>
+				<div class="flex-item">Latte</div>
+				<div class="flex-item">Mocha</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<p>&copy; 2025 Java Haven. All Rights Reserved.</p>
+		</footer>
+	</body>
+</html>
